@@ -17,7 +17,10 @@ router
   .get(authenticateUser, authorizePermission("admin"), getAllUsers);
 router.route("/currentUser").get(authenticateUser, showCurrentUser);
 router.route("/updateUserPassword").patch(authenticateUser, updateUserPassword);
-router.route("/updateUser").patch(authenticateUser, updateUser);
-router.route("/:id").get(authenticateUser, getSingleUser);
+// router.route("/updateUser").patch(authenticateUser, updateUser);
+router
+  .route("/:id")
+  .get(authenticateUser, getSingleUser)
+  .patch(authenticateUser, updateUser);
 
 module.exports = router;

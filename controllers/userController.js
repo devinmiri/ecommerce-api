@@ -77,7 +77,7 @@ const updateUser = async (req, res) => {
 
   const tokenUser = createTokenUser(user);
   attachCookiesToResponse(res, tokenUser);
-  res.status(200).json({ msg: "User updated successfully" });
+  res.status(200).json({ user: tokenUser });
 };
 
 module.exports = {
