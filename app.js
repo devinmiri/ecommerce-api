@@ -12,7 +12,7 @@ const mongosanitize = require("express-mongo-sanitize");
 
 //extra packages
 
-const morgan = require("morgan");
+
 const cookieParser = require("cookie-parser");
 
 const errorHandlerMiddleware = require("./middleware/error-handler");
